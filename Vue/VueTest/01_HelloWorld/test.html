@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01—HelloWorld</title>
+</head>
+<body>
+
+    <!-- 
+    1.引入vue.js
+    2.创建vue对象
+        el：指定根element（选择器）
+        data： 初始化数据（页面可以访问）
+    3.双向数据绑定（v-model指令）
+    4.数据显示：{{}} 插值表达式
+    5.理解vue的mvvm的实现 
+    -->
+
+    <!-- 
+    MVVM 理解
+
+    model: 模型，数据对象（data）
+    view: 视图，模板页面
+    viewModel: 视图模型（vue的实例）
+    
+    -->
+
+    <!-- 模板 -->
+    <div id="test">
+        <input type="text" v-model="username"/>
+        <p>Hello {{username}}</p>
+    </div>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        //创建Vue实例
+       const vm =  new Vue({//配置对象
+            el: '#test', //element:选择器
+            data: { //数据 （model）
+                username: 'liuscoding'
+            },
+        })    
+    </script>
+   
+
+</body>
+</html>
